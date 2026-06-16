@@ -60,6 +60,7 @@ now_if_args(function()
     -- - Execute `:=require('nvim-treesitter').get_available()`
     -- - Visit 'SUPPORTED_LANGUAGES.md' file at
     --   https://github.com/nvim-treesitter/nvim-treesitter/blob/main
+    'c',
     'go',
     'gomod',
     'gosum',
@@ -108,6 +109,7 @@ now_if_args(function()
   -- Uncomment and tweak the following `vim.lsp.enable()` call to enable servers.
   vim.lsp.enable({
     -- For example, if `lua-language-server` is installed, use `'lua_ls'` entry
+    'lua_ls',
     'clangd'
   })
 end)
@@ -164,19 +166,24 @@ now_if_args(function()
   require('mason').setup()
 end)
 
--- Beautiful, usable, well maintained color schemes outside of 'mini.nvim' and
--- have full support of its highlight groups. Use if you don't like 'miniwinter'
--- enabled in 'plugin/30_mini.lua' or other suggested 'mini.hues' based ones.
--- Config.now(function()
---  -- Install only those that you need
- add({
-   'https://github.com/sainnhe/everforest',
-      'https://github.com/shatur/neovim-ayu',
-   'https://github.com/ellisonleao/gruvbox.nvim',
-    -- 'https://github.com/gbprod/nord.nvim'
-    'https://github.com/catppuccin/nvim'
- })
---
---   -- Enable only one
-  vim.cmd('color catppuccin-nvim')
--- end)
+-- ColorSchemes
+add({
+  'https://github.com/EdenEast/nightfox.nvim',
+  'https://github.com/rebelot/kanagawa.nvim',
+})
+vim.cmd('color kanagawa')
+
+-- Render Markdown
+add({
+  'https://github.com/MeanderingProgrammer/render-markdown.nvim',
+})
+
+-- Neogit and Diffview
+add({
+  'https://github.com/dlyongemallo/diffview-plus.nvim',
+  'https://github.com/neogitorg/neogit'
+})
+require('neogit').setup({
+  graph_style = 'kitty'
+})
+

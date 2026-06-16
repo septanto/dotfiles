@@ -1,0 +1,26 @@
+# Backup files
+*~
+\#*\#
+
+# Auto-save
+auto-save-list/
+
+# Native compilation cache
+eln-cache/
+
+# Customize
+custom.el
+
+# Package files
+elpa/
+var/
+
+# Recent files, bookmarks, places, savehist
+recentf
+.bookmarks
+places
+savehist
+
+# Session & desktop
+.emacs.desktop
+.emacs.desktop.lock
