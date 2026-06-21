@@ -17,11 +17,11 @@
   "Load theme based on system appearance (dark/light)."
   (let ((bg-mode (if (my/detect-dark-mode) 'dark 'light)))
     (mapc #'disable-theme custom-enabled-themes)
-    (load-theme (if (eq bg-mode 'dark) 'modus-vivendi-tinted t))))
+    (load-theme (if (eq bg-mode 'dark) 'deeper-blue 'adwaita))))
 
 (defun my/set-font ()
   "Set default font."
-  (set-face-attribute 'default nil :font "Iosevka Nerd Font" :height 130))
+  (set-face-attribute 'default nil :font "Iosevka Nerd Font" :height 120))
 
 (defun my/line-number-setup ()
   "Configure relative line numbers."
@@ -52,7 +52,20 @@
   (my/apply-theme-by-appearance)
   (my/set-font)
   (my/line-number-setup))
+  (tool-bar-mode -1)
 
 (my/apply-settings)
 (add-hook 'window-setup-hook #'my/apply-settings)
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-enabled-themes '(modus-vivendi-tinted)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
