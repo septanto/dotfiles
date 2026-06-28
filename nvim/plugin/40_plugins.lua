@@ -170,10 +170,9 @@ end)
 add({
   'https://github.com/EdenEast/nightfox.nvim',
   'https://github.com/rebelot/kanagawa.nvim',
-  'https://github.com/WTFox/jellybeans.nvim',
-  'https://github.com/thesimonho/kanagawa-paper.nvim'
 })
-vim.cmd('color kanagawa')
+
+vim.cmd('color kanagawa');
 
 -- Render Markdown
 add({
