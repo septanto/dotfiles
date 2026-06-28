@@ -166,14 +166,6 @@ now_if_args(function()
   require('mason').setup()
 end)
 
--- ColorSchemes
-add({
-  'https://github.com/EdenEast/nightfox.nvim',
-  'https://github.com/rebelot/kanagawa.nvim',
-})
-
-vim.cmd('color kanagawa');
-
 -- Render Markdown
 add({
   'https://github.com/MeanderingProgrammer/render-markdown.nvim',
