@@ -11,28 +11,28 @@ local dark = {
   fg_edge  = '#E8E3C8',
   fg       = '#DCD7BA',
   fg_mid   = '#C8C093',
-  fg_mid2  = '#A09A8A',
+  fg_mid2  = '#AEA89A', -- was #A09A8A; lightened to clear 4.5:1 on bg_mid2 (MatchParen bg)
 
   accent    = '#7E9CD8',
   accent_bg = '#223249',
 
-  red    = '#E46876',
+  red    = '#E8758A', -- was #E46876; lightened for ~5.7:1 on bg (PreProc, DiagnosticError)
   orange = '#DCA561',
   yellow = '#E6C384',
   green  = '#98BB6C',
   cyan   = '#7AA89F',
-  azure  = '#7E9CD8',
-  blue   = '#957FB8',
-  purple = '#b8b4d0',
+  azure  = '#7FB4CA', -- distinct from accent (#7E9CD8): aqua-leaning blue for Function/Directory
+  blue   = '#A992C8', -- was #957FB8; lightened for ~5.8:1 on bg (PreProc, @parameter)
+  purple = '#B8B4D0',
 
   red_bg    = '#43242B',
-  orange_bg = '#3A3520',
-  yellow_bg = '#3A3520',
+  orange_bg = '#3A3520', -- RenderMarkdownH1Bg
+  yellow_bg = '#3B3318', -- DiffText: darker amber tint, distinct from orange_bg
   green_bg  = '#2B3328',
-  cyan_bg   = '#252535',
-  azure_bg  = '#252535',
-  blue_bg   = '#223249',
-  purple_bg = '#252535',
+  cyan_bg   = '#252535', -- DiffChange
+  azure_bg  = '#1E2D3D', -- RenderMarkdownH5Bg: blue-tinted, distinct from cyan_bg
+  blue_bg   = '#2A2040', -- RenderMarkdownH6Bg: violet-tinted, distinct from accent_bg
+  purple_bg = '#2E2040', -- MarkviewPalette7Bg: deeper violet, distinct from blue_bg
 }
 
 -- Dayfox-inspired light palette (high contrast)
@@ -47,20 +47,20 @@ local light = {
   fg_edge2 = '#1A1030',
   fg_edge  = '#2A1C3E',
   fg       = '#3D2B5A',
-  fg_mid   = '#643F61',
-  fg_mid2  = '#824D5B',
+  fg_mid   = '#5A3E6E',
+  fg_mid2  = '#6A4E60', -- darkened for ~6.6:1 on bg, 5.4:1 on bg_mid (comments legible)
 
   accent    = '#2848A9',
-  accent_bg = '#D3C7BB',
+  accent_bg = '#C8D0DC', -- blue-tinted surface, distinct from bg_mid2 (#D3C7BB)
 
   red    = '#A5222F',
-  orange = '#AC5402',
-  yellow = '#8B7500',
+  orange = '#884200', -- darkened for ~6.7:1 on bg
+  yellow = '#875000',
   green  = '#396847',
-  cyan   = '#287980',
-  azure  = '#2848A9',
+  cyan   = '#1C6070', -- darkened for ~6.4:1 on bg
+  azure  = '#144A88', -- darkened for ~8:1 on bg; teal-leaning to stay distinct from accent
   blue   = '#6E33CE',
-  purple = '#A440B5',
+  purple = '#8A309A', -- darkened for ~6.8:1 on bg
 
   red_bg    = '#F0D8D8',
   orange_bg = '#F0E0D0',
